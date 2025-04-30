@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: curriculo-api
+    env: docker
+    repo: https://github.com/leoaccioly05/spring-boot
+    branch: main
+    buildCommand: "./mvnw clean package"
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        value: jdbc:postgresql://dpg-d08ouv1r0fns73dlarj0-a.oregon-postgres.render.com:5432/curriculo_leo
+      - key: SPRING_DATASOURCE_USERNAME
+        value: curriculo_leo_user
+      - key: SPRING_DATASOURCE_PASSWORD
+        value: aON2L0QMxdkiauHGq8aDvMJzjklhf34X
